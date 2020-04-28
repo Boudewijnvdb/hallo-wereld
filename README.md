@@ -37,3 +37,6 @@ Een klein oefenproject
     
     
     <p> nog een kleine aanapassing </p>
+    
+    
+    //* opmerking
