@@ -34,3 +34,6 @@ Een klein oefenproject
         <p>een stuk tekst </p>
 
     </header>
+    
+    
+    <p> nog een kleine aanapassing </p>
