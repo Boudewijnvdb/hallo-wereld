@@ -29,5 +29,8 @@ Een klein oefenproject
                 <li><a href="page.html">SHOP NOW</a></li>
             </ul>
         </nav>
+        
+        
+        <p>een stuk tekst </p>
 
     </header>
