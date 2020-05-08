@@ -14,9 +14,9 @@ knop.addEventListener('click', function () {
 
 //buttons
 
-//red
-
 const lichaam = document.querySelector("body");
+
+//red
 
 const knopred = document.querySelector("#red");
 
@@ -59,6 +59,4 @@ knophome.addEventListener('click', function () {
     lichaam.style.backgroundColor = "grey"
     navi.style.visibility = "hidden"
 });
-
-
 
