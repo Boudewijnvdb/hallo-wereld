@@ -1,0 +1,105 @@
+body {
+    background-color: grey;
+
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    height: 60px;
+}
+
+
+
+
+/* Toggle button */
+.btn-toggle-nav{
+    width: 60px;
+    height: 100%;
+    background-image:url('images/menu.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+}
+
+.btn-toggle-nav:hover{
+   opacity: 0.5;
+}
+/* end Toggle button */
+
+
+
+/*sidebar*/
+.nav-sidebar{
+    position: fixed;
+    left: 0px;
+    top: 60px;
+    padding: 0 5px;
+    height: 300px;
+    z-index: 1000;
+    visibility:hidden;
+    margin: 0;
+    padding-left: 0;
+    background-color: grey;
+    width:300px ;
+}
+
+
+.nav-sidebar ul {
+    width: 300px;
+    left: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+    border: lightgrey solid 2px;
+
+
+}
+
+.nav-sidebar ul li  {
+    line-height: 60px;
+    list-style: none;
+    left: 0px;
+    margin-bottom: 2px;
+    
+    
+}
+.nav-sidebar ul li a{
+    display: block;
+    height: 60px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: black ;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* End sidebar*/
+
+
+/* Background-styles*/
+ 
+#home{
+    background-color: grey;
+}
+
+#red {
+    background-color: red;
+    
+}
+
+#green {
+    background-color: green;
+}
+
+#orange{
+background-color: orange;
+}
+
+#purple{
+    background-color: purple;
+}
+
