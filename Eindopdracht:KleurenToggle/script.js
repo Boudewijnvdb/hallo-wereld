@@ -60,3 +60,6 @@ knophome.addEventListener('click', function () {
     navi.style.visibility = "hidden"
 });
 
+
+
+//oefen comment git
