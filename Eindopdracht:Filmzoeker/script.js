@@ -20,9 +20,31 @@ const movieListItems = movies.forEach(movie => {
 
 const ietsdoen = event => {
     const waarde = event.target.value;
-    console.log(waarde);
-}
 
+
+
+    switch (waarde) {
+        case 'Batman':
+            console.log('doe batman');
+            break;
+        case 'Laatste Films':
+            console.log('laatste films');
+            break;
+        case 'Avenger':
+            console.log('doe avengers');
+            break;
+        case 'Princess':
+            console.log('doe princess');
+            break;
+        case 'X-Men':
+            console.log('doe xmen');
+            break;
+        default:
+
+
+    }
+
+}
 
 
 
