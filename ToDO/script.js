@@ -1,7 +1,5 @@
 document.getElementById('postData').addEventListener('submit', postData);
 
-
-
 // Get data
 const InputData = async () => {
     const apiUrl = "https://wincacademydatabase.firebaseio.com/Boudewijn/Tasks.json"
@@ -38,21 +36,19 @@ doSomethingWithData();
 
 
 //post data
-function postData(event) {
-    event.preventDefault();
-
-    let title = document.getElementById('title').value;
-
-    console.log(title);
-
+function postData() {
+    let task = document.getElementById('title').value;
 
     fetch("https://wincacademydatabase.firebaseio.com/Boudewijn/Tasks.json", {
         method: 'POST',
-        headers: new Headers(),
-        body: JSON.stringify({ description: title, "done": true })
+        body: JSON.stringify({ description: task, "done": true })
     }).then((res) => res.json())
         .then((data) => console.log(data))
+        .then((data) => console.log(data))
         .catch((err) => console.log(err))
+
+    doSomethingWithData();
+
 }
 
 
