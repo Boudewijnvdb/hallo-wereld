@@ -26,8 +26,7 @@ const doSomethingWithData = async function () {
         but.innerHTML = "delete";
         item.appendChild(but);
         but.value = element.id;
-        but.addEventListener('click', ietsdoen);
-
+        but.addEventListener('click', DeleteData);
     })
 }
 
@@ -35,9 +34,4 @@ doSomethingWithData();
 
 
 
-const ietsdoen = event => {
-    const waarde = event.target.value;
-    console.log(waarde);
-
-}
 

@@ -31,10 +31,9 @@ function postData() {
 
 
 //Delete data
-const DeleteData = async () => {
-
-
-    const apiUrl = `https://wincacademydatabase.firebaseio.com/Boudewijn/Tasks/${hashid}.json`
+const DeleteData = async (event) => {
+    const waarde = event.target.value;
+    const apiUrl = `https://wincacademydatabase.firebaseio.com/Boudewijn/Tasks/${waarde}.json`
     try {
         const res = await fetch(apiUrl, { method: "DELETE" });
         const datas = await res.json();
@@ -42,6 +41,7 @@ const DeleteData = async () => {
     } catch (error) {
         console.log(error);
     }
+
 }
 
 
