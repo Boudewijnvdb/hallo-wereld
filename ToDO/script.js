@@ -1,18 +1,9 @@
-document.getElementById('postData').addEventListener('submit', postData);
+const subknop = document.getElementById('postData')
+const buttons = document.querySelectorAll("button");
 
-// Get data
-const InputData = async () => {
-    const apiUrl = "https://wincacademydatabase.firebaseio.com/Boudewijn/Tasks.json"
-    try {
-        const res = await fetch(apiUrl, { method: "GET" });
-        const datas = await res.json();
-        console.log(datas);
-        return datas;
-    } catch (error) {
-        console.log(error);
-    }
-}
 
+
+subknop.addEventListener('submit', postData);
 
 //transform data
 const doSomethingWithData = async function () {
@@ -23,32 +14,30 @@ const doSomethingWithData = async function () {
         done: result[key].done
     }));
 
+    console.log(tasks);
+
     //put task in DOM
     tasks.forEach(element => {
         const item = document.createElement('li');
         const takenLijst = document.getElementById('lijst');
         item.innerHTML = element.description
         takenLijst.appendChild(item);
+        const but = document.createElement('button');
+        but.innerHTML = "delete";
+        item.appendChild(but);
+        but.value = element.id;
+        but.addEventListener('click', ietsdoen);
+
     })
 }
 
 doSomethingWithData();
 
 
-//post data
-function postData() {
-    let task = document.getElementById('title').value;
 
-    fetch("https://wincacademydatabase.firebaseio.com/Boudewijn/Tasks.json", {
-        method: 'POST',
-        body: JSON.stringify({ description: task, "done": true })
-    }).then((res) => res.json())
-        .then((data) => console.log(data))
-        .then((data) => console.log(data))
-        .catch((err) => console.log(err))
-
-    doSomethingWithData();
+const ietsdoen = event => {
+    const waarde = event.target.value;
+    console.log(waarde);
 
 }
-
 
